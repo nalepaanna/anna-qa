@@ -11,5 +11,7 @@ export class ContactPage extends BasePage {
     this.contactForm
       .locator(`.hs-form-field:has-text('${label}')`)
       .locator(".hs-error-msg");
-  readonly summaryErrorMessage = this.contactForm.locator("ul .hs-error-msgs");
+  readonly summaryErrorMessage = this.contactForm.locator(
+    ".hs_error_rollup .hs-error-msgs"
+  );
 }
